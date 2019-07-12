@@ -1,0 +1,51 @@
+class Animal{
+     
+     constructor(cor,peso){
+     this.cor = cor;
+     this.peso = peso;
+   }
+   
+   dormir(){
+     console.log("Dormir")
+   }
+   
+}
+
+
+class Cao extends Animal{
+
+   constructor(cor,peso,raca){
+     super(cor,peso);
+     this.raca = raca;
+   }
+   
+   getInformacoes(){
+      
+   }
+   
+   latir(){
+    console.log("Latiu")
+   }
+  
+}
+
+
+var cao = new Cao("Preto",33.5,"Pitbull")
+
+var objetoLiteral = {
+cor: 'Marrom',
+raca: 'Labrador',
+peso: 33,
+filhotes:{filhote1: 'Rex' , filhote2:'Pit'}
+
+}
+
+console.log(objetoLiteral.filhotes.filhote1)
+
+var objetoJson = '{"cor":"Marrom","peso":30,"raca":"Labrador"}';
+
+var Objeto = JSON.parse(objetoJson)
+
+console.log(Objeto)
+
+console.log(objetoJson)
